@@ -4,95 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="calculator" >
-        <form >
-            <input type="text" name="search" id="search">
-        </form>
-        <div class="btn-container">
+    <div class="mainconatiner border">
+        <label >Select a movie :</label>
+        <select  id="movie">
+            <option value="220">Justice leage</option>
+            <option value="240">Avatar 2</option>
+            <option value="200">URI</option>
+        </select>
+    </div>
+    <div class="marquee border">
+        <marquee  direction="right" scrollamount="3" >
+            <label >*Avatar 2--1:00PM *Justice leauge--5:00PM   *URI--10:00PM</label>  
+        </marquee>
+    </div>
 
-            <button type="button"
-            id="clear"
-            onclick="clearScreen()"
-            class="btn btn-2">AC</button>
+    <ul class="top_corner border">
+        <li>
+            <div class="seat "></div>
+            <small>Available </small> 
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat sold"></div>
+            <small>Sold</small>
+        </li>
+    </ul>
 
-            <button type="button"
-            class="btn btn-2" 
-            onclick="display('**')"
-            >x<sup>y</sup></button>
+    <div class="conatiner border">
+        <div class="screen"></div>
 
-            <button type="button" class="btn btn-2" 
-            onclick="display('%')"
-            >%</button>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
 
-            <button type="button" class="btn btn-2" 
-            onclick="display('/')"
-                  >/</button>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
 
-            <button type="button" class="btn btn-3"
-            onclick="display(7)"
-            >7</button>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat "></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
 
-            <button type="button" class="btn btn-3" 
-            onclick="display(8)"
-          >8</button>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat sold"></div>
+            <div class="seat "></div>
+            <div class="seat "></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
 
-            <button type="button" class="btn btn-3"
-            onclick="display(9)"
-          >9</button>
-
-            <button type="button" class="btn btn-1"
-            onclick="display('*')" 
-             >*</button>
-
-            <button type="button" class="btn btn-3" 
-            onclick="display(4)"
-             >4</button>
-
-            <button type="button" 
-            class="btn btn-3"
-            onclick="display(5)">5
-            </button>
-
-            <button type="button"
-            class="btn btn-3" onclick="display(6)">6</button>
-
-            <button type="button" class="btn btn-1" 
-            onclick="display('-')"
-            >-</button>
-
-            <button type="button" class="btn btn-3" 
-            onclick="display(1)">1</button>
-
-            <button type="button" class="btn btn-3"
-            onclick="display(2)"
-            >2</button>
-
-            <button type="button" class="btn btn-3" 
-            onclick="display(3)"
-            >3</button>
-
-            <button type="button" class="btn btn-1"
-            onclick="display('+')"
-            >+</button>
-
-            <button type="button" class="btn btn-3 btn-zero" 
-            onclick="display(0)"
-            >0</button>
-
-            <button type="button" class="btn btn-3" 
-            onclick="display('.')"
-            >.</button>
-
-            <button type="button" class="btn btn-1" 
-            onclick="calculate()"
-            >=</button>
+        
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat sold"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
         </div>
     </div>
 
-    <script src="./script.js"></script>
+    <p class="text border">
+        You have selected <span id="count">0</span> seat for price <span id="total">0.</span>
+    </p>
+
+     <script src="/script.js"></script>
 </body>
 </html>
